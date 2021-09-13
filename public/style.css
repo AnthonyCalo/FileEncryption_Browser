@@ -74,7 +74,8 @@ button{
     cursor: pointer;
 }
 .fileName{
-    color: red;
+    color: #2d1152;
+    font-size:1.3em;
     font-weight: bold;
 
 }
@@ -84,6 +85,24 @@ button{
 }
 .noFileText{
     text-align: center;
+}
+.noFileWarning{
+    background-color: white;
+    border: 4px solid;
+    font-weight: bold;
+    border-color: red;
+    color: red;
+    height: 195px;
+    width: 33.3%;
+    z-index: 1;
+    position: absolute;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.noFileWarningActive{
+    display: flex;
 }
 .footer{
     height: 30px;
@@ -137,7 +156,6 @@ i.icon{
 }
 label{
     margin-right: 10px;
-    float: left;
     font-weight: bold;
     color: black;
     font-size: 1.49em;
@@ -173,6 +191,9 @@ label{
 }
 .Password{
     width: 70%;
+}
+.radioLabel{
+    margin-right: 40px;
 }
 .ui.form label{
     font-size: 1.2em;

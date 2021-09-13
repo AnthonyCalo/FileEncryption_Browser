@@ -51,6 +51,9 @@ const Form =(props)=>{
           x.type = "password";
         }
       }  
+    const showPassClick=()=>{
+        document.getElementById("showPassCheckbox").click();
+    }
     const handleSubmit=()=>{
         if(pass.length<4){
             var passblock = document.getElementById('passBlock');
@@ -75,7 +78,7 @@ const Form =(props)=>{
             <div className="list-group-item list-group-item-one">
                 <div className="ui form">
                     <div className="enc_dec">
-                        <label for="fruit">Encrypt or Decrypt:</label>
+                        <label className="radioLabel" for="action_radio">Action:</label>
                         <div>
                             <div className="action_radio">
                                 <input type="radio" value="Encrypt" id="encryptRadio" onClick={(e)=>radioClick(e)} name="fruit" tabindex="0" />
@@ -97,7 +100,8 @@ const Form =(props)=>{
                     <label>{renderLabel()}</label>
                     <input className="Password" id="passInput" type="password" onChange={changeHandler}/>
                     <br/>
-                    <input type="checkbox" className="checkBox" onClick={()=>myFunction()} />Show Password
+                    <input type="checkbox" id="showPassCheckbox" className="checkBox" onClick={()=>myFunction()} />
+                    <label onClick={()=>showPassClick()}>Show Password</label>
                 </div>
             </div>
             <div className="list-group-item button-lgi list-group-item-last">

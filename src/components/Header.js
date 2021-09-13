@@ -7,7 +7,7 @@ const Header =()=>{
            <div id="header" className="ui menu ac_header">
                <a href="/" className='item header_item'>AC Encryption</a>
                <div className="right menu">
-               <img alt="github" href="/" className="gitLogo" src="/images/git_logo.png" />
+               <a href="https://github.com/paulie-walnuts/FileEncryption_Browser" ><img alt="github"  className="gitLogo" src="/images/git_logo.png" /></a>
                </div>
            </div>
        )

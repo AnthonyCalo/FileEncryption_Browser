@@ -44,6 +44,9 @@ const DropZone=(props)=>{
    <div className="input_center">
 
             <div  className="drop-zone">
+                {/* hidden except for warning */}
+                <div id="noFile" className="noFileWarning">PLEASE SELECT A FILE!</div>
+                <div id="noCrypt" className="noFileWarning">PLEASE CHOOSE A '.crypt' FILE FOR DECRYPTION</div>
                 <Dropzone onDrop={onDropFunction}>
                 {({getRootProps, getInputProps}) => (
                     <div className="fileDropZone" {...getRootProps()}>

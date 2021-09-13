@@ -77,15 +77,32 @@ const Body=()=>{
     const [file, setFile] = useState();
 
     const recieveFile=(file)=>{
-        console.log(file);
+        console.log(file.name.substr(file.name.length-6));
         setFile(file);
     }
     const action=({password, action})=>{
-        if(action.action==='Encrypt'){
-            encrypt(file, password.pass);
-        }else if(action.action==="Decrypt"){
-            decrypt(file, password.pass);
+        if(file){
+            if(action.action==='Encrypt'){
+                encrypt(file, password.pass);
+            }else if(action.action==="Decrypt"){
+                if(file.name.substr(file.name.length-6)==='.crypt'){
+                    decrypt(file, password.pass);
+                }else{
+                    let cryptWarning = document.getElementById("noCrypt");
+                    cryptWarning.classList.add('noFileWarningActive');
+                    setTimeout(()=>{
+                        cryptWarning.setAttribute('class', "noFileWarning")
+                    }, 2000)
+                }
+            }
+        }else{
+            let warning = document.getElementById("noFile");
+            warning.classList.add('noFileWarningActive');
+            setTimeout(()=>{
+                warning.setAttribute('class', "noFileWarning")
+            }, 2000)
         }
+        
     }
 
 
