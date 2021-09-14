@@ -23,7 +23,7 @@ const DropZone=(props)=>{
         if(!isFilePicked){
             return(
                 <div className="noFileText">
-                    <p>Drag a file or click to upload a file</p>
+                    <p>Drag and drop or click to upload a file</p>
                     <i className="icon square plus plusIcon"></i>
 
                 </div>
