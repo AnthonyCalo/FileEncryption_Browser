@@ -148,7 +148,7 @@ i.icon{
     display: flex;
     justify-content: center;
     width: 50%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 .info{
     font-size:.8em;
@@ -187,6 +187,7 @@ label{
     border-color: #2d1152;
     background-color: #e0c9cb;
     background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+    margin-bottom: 50px;
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .Password{

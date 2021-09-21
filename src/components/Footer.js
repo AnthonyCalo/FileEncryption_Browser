@@ -6,7 +6,6 @@ class Footer extends React.Component{
         return(
             <div className="footer">
                 <p>Developed by Anthony Calo ©{this.year}</p>
-                <p>©{this.year}</p>
             </div>
         )
     }

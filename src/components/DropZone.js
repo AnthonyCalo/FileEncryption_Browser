@@ -54,7 +54,7 @@ const DropZone=(props)=>{
                     {renderDrop()}
                     <br />
                     <p className="info">Encrypt Files using SHA-256 hashed password and AES encryption.<br/>
-                    Your files never leave browser.</p>
+                    Your files never leave the browser</p>
                     </div>
                 )}
                 </Dropzone>
